@@ -1,17 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Blindness Simulator</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Blindness Simulator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/destyle.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet">
+  <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
 </head>
+
 <body>
+  <!-- Filter definitions -->
+  <svg id="colorblind-filters">
+    <defs>
+      <!-- blindness filters here -->
+    </defs>
+  </svg>
+
+  <header>
+    <img src="img/logo2.png" alt="">
     <h1>Color Blindness Simulator</h1>
-    <div id="app">
-        <!-- App content will go here -->
+  </header>
+
+  <main>
+    <div id="file-input">
+      <h2><span class="emphasized">Step 1.</span> Select an image file</h2>
+      <input type="file" id="img-picker" accept="image/*">
     </div>
-    <script src="js/filters.js"></script>
-    <script src="js/html2canvas.min.js"></script>
+
+    <div id="download-button">
+
+      <h2><span class="emphasized">Step 2.</span> Click button to download gallery</h2>
+      <button id="download-button" onclick="downloadGallery()">
+        <i class="fa fa-download" aria-hidden="true"></i>
+        Download simulations
+      </button>
+    </div>
+
+    <a href="" id="blank" style="display: none"></a>
+
+    <div id="gallery">
+      <!-- Gallery with different simulations -->
+      <!-- Add other figures for different types of color blindness -->
+    </div>
+  </main>
+
+  <hr />
+
+  <footer>
+    <!-- Footer content -->
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/html2canvas.min.js"></script>
+  <script src="js/filters.js"></script>
 </body>
+
 </html>
