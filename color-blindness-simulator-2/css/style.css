@@ -1,8 +1,170 @@
+
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* General styles */
+
 body {
-    font-family: Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
+  margin: 0 auto;
 }
-#app {
-    padding: 20px;
-    background-color: #f0f0f0;
+
+svg {
+  position: absolute;
 }
-    
+
+button {
+  background-color: #4CAF50;
+  padding: 1rem;
+}
+
+a {
+  text-decoration: underline;
+}
+
+h1,
+figcaption {
+  text-align: center;
+  font-weight: 600;
+  color: #494949;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+figure {
+  margin: 0 auto;
+  padding: 1rem 0 1rem 0;
+}
+
+figcaption {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
+
+.emphasized {
+  font-weight: 600;
+}
+
+
+/* Page areas */
+
+header,
+#explanation,
+#file-input,
+#download-button,
+#gallery,
+#credits {
+  padding: 2rem;
+}
+
+header {
+  grid-area: head;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header h1, header img{
+  max-height: 70px;
+  margin: auto 10px;
+}
+
+header,
+footer {
+  color: white;
+  background-color: #000000;
+}
+
+header>h1 {
+  color: white;
+}
+
+main {
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: 'explanation' 'file' 'download' 'gallery';
+}
+
+@media only screen and (min-width: 600px) {
+  main {
+    max-width: 1000px;
+    grid-template-areas: 'explanation explanation' 'file download' 'gallery gallery';
+  }
+}
+
+#explanation {
+  grid-area: explanation;
+}
+
+#file-input {
+  grid-area: file;
+}
+
+#download-button {
+  grid-area: download;
+}
+
+#download-button button {
+  box-shadow: 0 0 20px #ccc;
+  border-radius: 15px;
+  color: white;
+  font-size: larger;
+  margin: 20px;
+}
+#download-button button:hover {
+  background-color: #3e8e41;
+}
+
+#gallery {
+  grid-area: gallery;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 10px;
+  padding: 1rem;
+  /* margin: 0 auto; */
+}
+
+.img {
+  /* display: block; */
+  /* width: 100%; */
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.img--protanomaly {
+  filter: url('#protanomaly');
+}
+
+.img--protanopia {
+  filter: url('#protanopia');
+}
+
+.img--deuteranomaly {
+  filter: url('#deuteranomaly');
+}
+
+.img--deuteranopia {
+  filter: url('#deuteranopia');
+}
+
+.img--tritanomaly {
+  filter: url('#tritanomaly');
+}
+
+.img--tritanopia {
+  filter: url('#tritanopia');
+}
+
+.img--achromatomaly {
+  filter: url('#achromatomaly');
+}
+
+.img--achromatopsia {
+  filter: url('#achromatopsia');
+}
